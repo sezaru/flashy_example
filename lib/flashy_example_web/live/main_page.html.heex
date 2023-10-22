@@ -1,0 +1,34 @@
+<div>
+  <div class="flex pb-3 gap-2">
+    <.button phx-click="info">Info notification</.button>
+    <.button phx-click="success">Success notification</.button>
+    <.button phx-click="warning">Warning notification</.button>
+    <.button phx-click="danger">Error notification</.button>
+  </div>
+
+  <div class="flex pb-3 gap-2">
+    <.button phx-click="info_no_close">Info notification without close button</.button>
+    <.button phx-click="success_no_close">Success notification without close button</.button>
+    <.button phx-click="warning_no_close">Warning notification without close button</.button>
+    <.button phx-click="danger_no_close">Error notification without close button</.button>
+  </div>
+
+  <div class="flex pb-3 gap-2">
+    <.button phx-click="info_no_dismiss">Info notification without dismiss</.button>
+    <.button phx-click="success_no_dismiss">Success notification without dismiss</.button>
+    <.button phx-click="warning_no_dismiss">Warning notification without dismiss</.button>
+    <.button phx-click="danger_no_dismiss">Error notification without dismiss</.button>
+  </div>
+
+  <div class="flex pb-3 gap-2">
+    <.button phx-click="info_timeout">Info notification dismiss faster</.button>
+  </div>
+
+  <div class="flex pb-3 gap-2">
+    <CustomComponent.live_render id="custom" />
+  </div>
+
+  <div class="flex pb-3 gap-2">
+    <.button phx-click="redirect">Redirect</.button>
+  </div>
+</div>
