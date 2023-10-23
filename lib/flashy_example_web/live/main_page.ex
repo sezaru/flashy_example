@@ -10,10 +10,9 @@ defmodule FlashyExampleWeb.Live.MainPage do
   import PetalComponents.Button
 
   def handle_event("info", _, socket) do
-    options = Flashy.Normal.Options.new()
     message = "Blibs <i>blobs</i>"
 
-    notification = Notifications.Normal.new(:info, message, options)
+    notification = Notifications.Normal.new(:info, message)
 
     socket = socket |> put_notification(notification)
 
@@ -21,10 +20,9 @@ defmodule FlashyExampleWeb.Live.MainPage do
   end
 
   def handle_event("success", _, socket) do
-    options = Flashy.Normal.Options.new()
     message = "Blibs <i>blobs</i>"
 
-    notification = Notifications.Normal.new(:success, message, options)
+    notification = Notifications.Normal.new(:success, message)
 
     socket = socket |> put_notification(notification)
 
@@ -32,10 +30,9 @@ defmodule FlashyExampleWeb.Live.MainPage do
   end
 
   def handle_event("warning", _, socket) do
-    options = Flashy.Normal.Options.new()
     message = "Blibs <i>blobs</i>"
 
-    notification = Notifications.Normal.new(:warning, message, options)
+    notification = Notifications.Normal.new(:warning, message)
 
     socket = socket |> put_notification(notification)
 
@@ -43,10 +40,9 @@ defmodule FlashyExampleWeb.Live.MainPage do
   end
 
   def handle_event("danger", _, socket) do
-    options = Flashy.Normal.Options.new()
     message = "Blibs <i>blobs</i>"
 
-    notification = Notifications.Normal.new(:danger, message, options)
+    notification = Notifications.Normal.new(:danger, message)
 
     socket = socket |> put_notification(notification)
 
@@ -153,10 +149,9 @@ defmodule FlashyExampleWeb.Live.MainPage do
   end
 
   def handle_event("redirect", _, socket) do
-    options = Flashy.Normal.Options.new()
     message = "Redirected to other page"
 
-    notification = Notifications.Normal.new(:info, message, options)
+    notification = Notifications.Normal.new(:info, message)
 
     socket = socket |> put_notification(notification) |> push_redirect(to: ~p"/")
 
