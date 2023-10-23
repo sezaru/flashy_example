@@ -47,7 +47,7 @@ defmodule FlashyExample.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
       {:petal_components, "~> 1.0"},
-      {:flashy, path: "../flashy"}
+      {:flashy, "~> 0.2"}
     ]
   end
 
