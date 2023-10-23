@@ -33,7 +33,6 @@ window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
 window.addEventListener("phx:page-loading-stop", _info => topbar.hide())
 
 window.addEventListener("phx:js-exec", ({ detail }) => {
-  console.log(detail)
   document.querySelectorAll(detail.to).forEach(el => {
     liveSocket.execJS(el, el.getAttribute(detail.attr))
   })
