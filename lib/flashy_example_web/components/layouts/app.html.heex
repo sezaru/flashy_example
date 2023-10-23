@@ -1,6 +1,9 @@
 <main>
   <div class="h-screen flex flex-col">
-    <Flashy.Container.render flash={@flash} />
+    <Flashy.Container.render
+      flash={@flash}
+      class="!right-0 left-0 !items-end items-start"
+    />
 
     <div class="py-20 mx-auto max-w-2xl flex h-screen">
       <%= @inner_content %>

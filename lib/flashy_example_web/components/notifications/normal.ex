@@ -1,6 +1,8 @@
 defmodule FlashyExampleWeb.Components.Notifications.Normal do
   @moduledoc false
 
+  alias FlashyExampleWeb.Components.Notifications.Helpers
+
   use FlashyExampleWeb, :html
 
   use Flashy.Normal, types: [:info, :success, :warning, :danger]
@@ -12,7 +14,13 @@ defmodule FlashyExampleWeb.Components.Notifications.Normal do
 
   def render(assigns) do
     ~H"""
-    <Flashy.Normal.render key={@key} notification={@notification}>
+    <Flashy.Normal.render
+      key={@key}
+      notification={@notification}
+      class="!pr-3 pl-3 !translate-x-full translate-x-[-100%]"
+      hide_action={Helpers.hide_notification(@key)}
+      show_action={Helpers.show_notification(@key)}
+    >
       <.alert
         with_icon
         close_button_properties={close_button_properties(@notification.options, @key)}

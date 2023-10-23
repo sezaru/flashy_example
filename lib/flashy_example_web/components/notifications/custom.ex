@@ -1,7 +1,9 @@
 defmodule FlashyExampleWeb.Components.Notifications.Custom do
   @moduledoc false
 
-  alias Flashy.{Component, Helpers}
+  alias FlashyExampleWeb.Components.Notifications.Helpers
+
+  alias Flashy.Component
 
   use FlashyExampleWeb, :live_component
 
@@ -59,7 +61,7 @@ defmodule FlashyExampleWeb.Components.Notifications.Custom do
     ~H"""
     <div
       id={@id}
-      class={Helpers.notification_classes()}
+      class={"pointer-events-auto pl-3 select-none drop-shadow flex items-center translate-x-[-100%] hidden"}
       phx-mounted={Helpers.show_notification(@key)}
       data-hide={Helpers.hide_notification(@key)}
       data-show={Helpers.show_notification(@key)}
