@@ -18,6 +18,8 @@ defmodule FlashyExampleWeb.Router do
     pipe_through :browser
 
     live "/", Live.MainPage
+
+    get "/dead", Controller.Dead, :index
   end
 
   # Other scopes may use custom stacks.

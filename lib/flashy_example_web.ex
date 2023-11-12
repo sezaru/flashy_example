@@ -44,6 +44,9 @@ defmodule FlashyExampleWeb do
 
       import Plug.Conn
 
+      # Add Flash notifications functionality
+      import Flashy
+
       unquote(verified_routes())
     end
   end
