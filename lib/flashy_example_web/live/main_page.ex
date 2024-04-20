@@ -158,6 +158,26 @@ defmodule FlashyExampleWeb.Live.MainPage do
     {:noreply, socket}
   end
 
+  def handle_event("replace_1", _, socket) do
+    message = "Replace 1"
+
+    notification = Notifications.Normal.new(:info, message)
+
+    socket = socket |> put_notification(notification, key: "replace_key")
+
+    {:noreply, socket}
+  end
+
+  def handle_event("replace_2", _, socket) do
+    message = "Replace 2"
+
+    notification = Notifications.Normal.new(:info, message)
+
+    socket = socket |> put_notification(notification, key: "replace_key")
+
+    {:noreply, socket}
+  end
+
   def handle_info({:notification, notification}, socket) do
     {:noreply, put_notification(socket, notification)}
   end
