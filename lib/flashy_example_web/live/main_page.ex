@@ -153,7 +153,7 @@ defmodule FlashyExampleWeb.Live.MainPage do
 
     notification = Notifications.Normal.new(:info, message)
 
-    socket = socket |> put_notification(notification) |> push_redirect(to: ~p"/")
+    socket = socket |> put_notification(notification) |> push_navigate(to: ~p"/")
 
     {:noreply, socket}
   end

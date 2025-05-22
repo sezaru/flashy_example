@@ -6,6 +6,7 @@ defmodule FlashyExampleWeb.Components.Notifications.Disconnected do
   use Flashy.Disconnected
 
   import PetalComponents.Alert
+  import PetalComponents.Icon
 
   attr :key, :string, required: true
 
@@ -13,7 +14,7 @@ defmodule FlashyExampleWeb.Components.Notifications.Disconnected do
     ~H"""
     <Flashy.Disconnected.render key={@key}>
       <.alert with_icon color="danger" heading="We can't find the internet">
-        Attempting to reconnect <Heroicons.arrow_path class="ml-1 w-3 h-3 inline animate-spin" />
+        Attempting to reconnect <.icon name="hero-arrow-path" class="ml-1 w-3 h-3 inline animate-spin" />
       </.alert>
     </Flashy.Disconnected.render>
     """
